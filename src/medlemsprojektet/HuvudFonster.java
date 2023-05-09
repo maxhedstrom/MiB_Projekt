@@ -45,7 +45,6 @@ public class HuvudFonster extends javax.swing.JFrame {
         lblRubrikVisafornamn = new javax.swing.JLabel();
         lblNamn = new javax.swing.JLabel();
         btnAlien = new javax.swing.JButton();
-        BtnTestknapp = new javax.swing.JButton();
         btnAdmin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -77,13 +76,6 @@ public class HuvudFonster extends javax.swing.JFrame {
             }
         });
 
-        BtnTestknapp.setText("Malle");
-        BtnTestknapp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnTestknappActionPerformed(evt);
-            }
-        });
-
         btnAdmin.setText("Logga in som Adminstrinatör");
         btnAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,14 +98,9 @@ public class HuvudFonster extends javax.swing.JFrame {
                             .addComponent(btnAgent)
                             .addComponent(btnAlien)
                             .addComponent(btnAdmin))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(lblNamn, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(61, 61, 61)
-                                .addComponent(BtnTestknapp)))))
-                .addContainerGap(115, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(lblNamn, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(125, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -127,9 +114,7 @@ public class HuvudFonster extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnAlien)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAdmin)
-                    .addComponent(BtnTestknapp))
+                .addComponent(btnAdmin)
                 .addContainerGap(61, Short.MAX_VALUE))
         );
 
@@ -158,15 +143,9 @@ agentWindow.setVisible(true);
         adminWindow.setVisible(true);
     }//GEN-LAST:event_btnAdminActionPerformed
 
-    private void BtnTestknappActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnTestknappActionPerformed
-             // TODO add your handling code here:
-             
-    }//GEN-LAST:event_BtnTestknappActionPerformed
-
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnTestknapp;
     private javax.swing.JButton btnAdmin;
     private javax.swing.JButton btnAgent;
     private javax.swing.JButton btnAlien;
