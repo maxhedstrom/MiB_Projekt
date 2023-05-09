@@ -12,6 +12,10 @@ import oru.inf.InfException;
  */
 public class AdminWindow extends javax.swing.JFrame {
 
+    private Object validering;
+    private String Användarnamn;
+    private String Lösenord;
+
     /**
      * Creates new form AdminWindow
      */
@@ -82,6 +86,18 @@ public class AdminWindow extends javax.swing.JFrame {
     private void btnLoggaInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoggaInActionPerformed
         // TODO add your handling code here:
         
+    if(validering.textNotEmpty(txtEpost));
+    try {
+        String User = new String();
+        Användarnamn = txtEpost.getText();
+        Lösenord = txtLösenord.getText();
+        
+        
+        catch{
+        
+    }
+    
+        
     }//GEN-LAST:event_btnLoggaInActionPerformed
 
     private void txtEpostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEpostActionPerformed
@@ -131,4 +147,5 @@ public class AdminWindow extends javax.swing.JFrame {
     private javax.swing.JTextField txtEpost;
     private javax.swing.JPasswordField txtLösenord;
     // End of variables declaration//GEN-END:variables
+
 }

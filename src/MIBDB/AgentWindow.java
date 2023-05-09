@@ -92,14 +92,7 @@ public class AgentWindow extends javax.swing.JFrame {
 
     private void btnLoggaInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoggaInActionPerformed
 // TODO add your handling code here:
-try {
-    String query = "Select Epost, Losenord from agent";
-        
-    }
-}
-catch(InfException e){
-    System.out.println ("Internt fel");
-}
+
     }//GEN-LAST:event_btnLoggaInActionPerformed
 
     private void txtLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLösenordActionPerformed
