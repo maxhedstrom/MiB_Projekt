@@ -3,11 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/Users/malekanwar/Documents/GitHub/MiB_Projekt/src/medlemsprojektet/HuvudFonster.java</file>
             <file>file:/Users/malekanwar/Documents/GitHub/MiB_Projekt/src/medlemsprojektet/Start.java</file>
             <file>file:/Users/malekanwar/Documents/GitHub/MiB_Projekt/src/medlemsprojektet/AdminWindow.java</file>
             <file>file:/Users/malekanwar/Documents/GitHub/MiB_Projekt/src/medlemsprojektet/AlienWindow.java</file>
             <file>file:/Users/malekanwar/Documents/GitHub/MiB_Projekt/src/medlemsprojektet/AgentWindow.java</file>
+=======
+            <file>file:/C:/Users/maxhe/OneDrive/Skrivbord/MiB_Projekt/src/medlemsprojektet/AgentWindow.java</file>
+            <file>file:/C:/Users/maxhe/OneDrive/Skrivbord/MiB_Projekt/src/medlemsprojektet/HuvudFonster.java</file>
+            <file>file:/C:/Users/maxhe/OneDrive/Skrivbord/MiB_Projekt/src/medlemsprojektet/Start.java</file>
+            <file>file:/C:/Users/maxhe/OneDrive/Skrivbord/MiB_Projekt/src/medlemsprojektet/AdminWindow.java</file>
+            <file>file:/C:/Users/maxhe/OneDrive/Skrivbord/MiB_Projekt/src/medlemsprojektet/AlienWindow.java</file>
+>>>>>>> f764d76582eb8037c59e387bf376c146779c8631
         </group>
     </open-files>
 </project-private>

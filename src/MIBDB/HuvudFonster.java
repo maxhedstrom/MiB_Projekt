@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package medlemsprojektet;
+package MIBDB;
 
 import javax.swing.JOptionPane;
 import oru.inf.InfDB;
@@ -141,6 +141,7 @@ agentWindow.setVisible(true);
         // Öppnar nytt fönster för admin
         AdminWindow adminWindow = new AdminWindow();
         adminWindow.setVisible(true);
+        
     }//GEN-LAST:event_btnAdminActionPerformed
 
 
