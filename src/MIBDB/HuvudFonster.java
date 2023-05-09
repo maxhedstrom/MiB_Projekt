@@ -115,7 +115,7 @@ public class HuvudFonster extends javax.swing.JFrame {
                 .addComponent(btnAlien)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnAdmin)
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(150, Short.MAX_VALUE))
         );
 
         pack();
