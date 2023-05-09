@@ -141,6 +141,7 @@ agentWindow.setVisible(true);
         // Öppnar nytt fönster för admin
         AdminWindow adminWindow = new AdminWindow();
         adminWindow.setVisible(true);
+        
     }//GEN-LAST:event_btnAdminActionPerformed
 
 

@@ -58,7 +58,7 @@
   <SubComponents>
     <Component class="javax.swing.JTextField" name="txtEpost">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Fyll i din Epost"/>
+        <Property name="text" type="java.lang.String" value="Fyll i din E-post"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEpostActionPerformed"/>

@@ -15,6 +15,8 @@ public class AlienWindow extends javax.swing.JFrame {
      */
     public AlienWindow() {
         initComponents();
+        txtEpost.selectAll();
+        txtLösenord.selectAll();
     }
 
     /**
@@ -32,7 +34,7 @@ public class AlienWindow extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        txtEpost.setText("Fyll i din Epost");
+        txtEpost.setText("Fyll i din E-post");
         txtEpost.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEpostActionPerformed(evt);

@@ -4,6 +4,8 @@
  */
 package medlemsprojektet;
 
+import oru.inf.InfException;
+
 /**
  *
  * @author maxhe
@@ -15,6 +17,8 @@ public class AdminWindow extends javax.swing.JFrame {
      */
     public AdminWindow() {
         initComponents();
+        txtEpost.selectAll();
+        txtLösenord.selectAll();
     }
 
     /**
@@ -32,7 +36,7 @@ public class AdminWindow extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        txtEpost.setText("Fyll i din Epost");
+        txtEpost.setText("Fyll i din E-post");
         txtEpost.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEpostActionPerformed(evt);
@@ -82,6 +86,8 @@ public class AdminWindow extends javax.swing.JFrame {
 
     private void txtEpostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEpostActionPerformed
         // TODO add your handling code here:
+     
+    
     }//GEN-LAST:event_txtEpostActionPerformed
 
     /**
@@ -118,6 +124,7 @@ public class AdminWindow extends javax.swing.JFrame {
             }
         });
     }
+      
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLoggaIn;

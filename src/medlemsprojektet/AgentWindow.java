@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package medlemsprojektet;
-
+import oru.inf.InfException;
 /**
  *
  * @author maxhe
@@ -15,6 +15,8 @@ public class AgentWindow extends javax.swing.JFrame {
      */
     public AgentWindow() {
         initComponents();
+        txtEpost.selectAll();
+        txtLösenord.selectAll();
     }
 
     /**
@@ -32,7 +34,7 @@ public class AgentWindow extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        txtEpost.setText("Fyll i din Epost");
+        txtEpost.setText("Fyll i din E-post");
         txtEpost.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEpostActionPerformed(evt);
@@ -40,6 +42,11 @@ public class AgentWindow extends javax.swing.JFrame {
         });
 
         txtLösenord.setText("password");
+        txtLösenord.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtLösenordActionPerformed(evt);
+            }
+        });
 
         btnLoggaIn.setText("Logga in");
         btnLoggaIn.addActionListener(new java.awt.event.ActionListener() {
@@ -84,8 +91,20 @@ public class AgentWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_txtEpostActionPerformed
 
     private void btnLoggaInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoggaInActionPerformed
-        // TODO add your handling code here:
+// TODO add your handling code here:
+try {
+    String query = "Select Epost, Losenord from agent";
+        
+    }
+}
+catch(InfException e){
+    System.out.println ("Internt fel");
+}
     }//GEN-LAST:event_btnLoggaInActionPerformed
+
+    private void txtLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLösenordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtLösenordActionPerformed
 
     /**
      * @param args the command line arguments
