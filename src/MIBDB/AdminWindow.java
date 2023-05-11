@@ -4,26 +4,33 @@
  */
 package MIBDB;
 
+import javax.swing.JOptionPane;
 import oru.inf.InfException;
+import oru.inf.infDB;
+import java.sql.PreparedStatement;
+
 
 /**
  *
  * @author maxhe
  */
 public class AdminWindow extends javax.swing.JFrame {
-
-    private Object validering;
-    private String Användarnamn;
-    private String Lösenord;
+ 
+    private static infDB idb;
+    
+    
 
     /**
      * Creates new form AdminWindow
      */
+
     public AdminWindow() {
+        
         initComponents();
         txtEpost.selectAll();
         txtLösenord.selectAll();
-    }
+       
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -86,16 +93,43 @@ public class AdminWindow extends javax.swing.JFrame {
     private void btnLoggaInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoggaInActionPerformed
         // TODO add your handling code here:
         
-    if(validering.textNotEmpty(txtEpost));
-    try {
-        String User = new String();
-        Användarnamn = txtEpost.getText();
-        Lösenord = txtLösenord.getText();
-        
-        
-        catch{
-        
+    if(Validering.textFaltHarVarde(txtEpost) || Validering.textFaltHarVarde(txtLösenord)) 
+    
+        try 
+    { 
+       idb = new infDB("mibdb", "3306", "mibdba", "mibkey");
+       String Användarnamn = txtEpost.getText();
+       String Lösenord = txtLösenord.getText();
+       String fraga = "Select Losenord from Agent where Epost= '"+ Användarnamn +"'";
+       String svar = idb.fetchsingle("fraga");
+       String resultat = svar;
+       
+       if(Lösenord.contains(resultat)){
+           System.out.println("inloggad");
+          //new inloggadAdmin().setVisible();
+                   
+       }
+       else 
+       {
+           JOptionPane.showMessageDialog(null, "Inloggning misslyckades, kolla adminstatus eller inloggningsuppgifter");
+       }
+    
     }
+    
+   
+         
+         catch(InfException ettUndantag){
+         JOptionPane.showMessageDialog(null, "Något gick fel");
+          System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
+        
+       }        
+
+
+
+
+        
+       
+    
     
         
     }//GEN-LAST:event_btnLoggaInActionPerformed
@@ -149,3 +183,4 @@ public class AdminWindow extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
 }
+
