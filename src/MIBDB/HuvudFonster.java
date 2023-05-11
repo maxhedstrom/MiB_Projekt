@@ -16,7 +16,7 @@ import oru.inf.InfException;
 public class HuvudFonster extends javax.swing.JFrame {
 
     private InfDB idb;
-    
+        
     /**
      * Creates new form huvudfonster
      */

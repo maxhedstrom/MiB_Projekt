@@ -42,6 +42,11 @@ public class AlienWindow extends javax.swing.JFrame {
         });
 
         txtLösenord.setText("password");
+        txtLösenord.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtLösenordActionPerformed(evt);
+            }
+        });
 
         btnLoggaIn.setText("Logga in");
         btnLoggaIn.addActionListener(new java.awt.event.ActionListener() {
@@ -89,6 +94,10 @@ public class AlienWindow extends javax.swing.JFrame {
         // TODO add your handling code here:
 
     }//GEN-LAST:event_btnLoggaInActionPerformed
+
+    private void txtLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLösenordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtLösenordActionPerformed
 
     /**
      * @param args the command line arguments
