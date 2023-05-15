@@ -10,7 +10,7 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author jpn
+ * @author max
  */
 public class Validering {
     
