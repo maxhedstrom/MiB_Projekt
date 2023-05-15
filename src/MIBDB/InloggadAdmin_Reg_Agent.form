@@ -32,94 +32,44 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="lblEpost" min="-2" pref="121" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="lblNamn" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                                      <Component id="lblTelefon" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                                      <Component id="lblOmrade" alignment="1" min="-2" pref="110" max="-2" attributes="0"/>
-                                      <Component id="lblID" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Component id="lblDatum" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblLosen" min="-2" pref="110" max="-2" attributes="0"/>
-                          <Component id="lblAdmin" min="-2" pref="110" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="txtAdmin" max="32767" attributes="0"/>
-                  <Component id="txtLosen" max="32767" attributes="0"/>
-                  <Component id="txtNamn" alignment="0" max="32767" attributes="0"/>
-                  <Component id="txtTelefon" alignment="0" max="32767" attributes="0"/>
-                  <Component id="txtOmrade" alignment="0" max="32767" attributes="0"/>
+                  <Component id="txtLosen" pref="184" max="32767" attributes="0"/>
+                  <Component id="txtNamn" alignment="0" pref="184" max="32767" attributes="0"/>
+                  <Component id="txtTelefon" alignment="0" pref="184" max="32767" attributes="0"/>
+                  <Component id="txtOmrade" alignment="0" pref="184" max="32767" attributes="0"/>
                   <Component id="btnLäggTill" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtID" alignment="0" max="32767" attributes="0"/>
-                  <Component id="txtDatum" alignment="0" max="32767" attributes="0"/>
-                  <Component id="txtEpost" alignment="0" min="-2" pref="184" max="-2" attributes="0"/>
+                  <Component id="txtID" alignment="0" pref="184" max="32767" attributes="0"/>
+                  <Component id="txtDatum" alignment="0" pref="184" max="32767" attributes="0"/>
+                  <Component id="txtEpost" alignment="0" pref="184" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="876" max="32767" attributes="0"/>
+              <EmptySpace pref="1101" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="txtID" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblID" min="-2" max="-2" attributes="0"/>
-              </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace pref="22" max="32767" attributes="0"/>
+              <Component id="txtID" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="txtNamn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="txtTelefon" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="txtDatum" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="txtEpost" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="txtAdmin" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="txtLosen" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="txtOmrade" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="lblNamn" min="-2" pref="22" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="lblTelefon" min="-2" pref="22" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="lblDatum" min="-2" pref="22" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="lblEpost" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="lblAdmin" min="-2" pref="22" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                      <Component id="lblLosen" min="-2" pref="22" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="lblOmrade" min="-2" pref="22" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
+              <Component id="txtNamn" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="txtTelefon" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="txtDatum" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+              <Component id="txtEpost" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="txtAdmin" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="txtLosen" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="txtOmrade" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnLäggTill" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="39" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -181,46 +131,6 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAdminActionPerformed"/>
       </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblNamn">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Namn:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblTelefon">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Telefon:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblDatum">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Anst&#xe4;llningsdatum:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblAdmin">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Administrator:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblLosen">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="L&#xf6;senord:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblOmrade">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Omr&#xe5;de:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblEpost">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="E-post:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblID">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Agent ID:"/>
-      </Properties>
     </Component>
   </SubComponents>
 </Form>

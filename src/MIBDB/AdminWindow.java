@@ -4,11 +4,15 @@
  */
 package MIBDB;
 
+<<<<<<< HEAD
 import javax.swing.JOptionPane;
 
 import oru.inf.infDB;
 
 
+=======
+import oru.inf.InfException;
+>>>>>>> parent of 7339971 (hklkbm)
 
 /**
  *
@@ -92,6 +96,7 @@ public class AdminWindow extends javax.swing.JFrame {
 
     private void btnLoggaInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoggaInActionPerformed
         // TODO add your handling code here:
+<<<<<<< HEAD
         
     if(Validering.textFaltHarVarde(txtEpost) || Validering.textFaltHarVarde(txtLösenord)) 
     
@@ -131,6 +136,8 @@ public class AdminWindow extends javax.swing.JFrame {
        
     
     
+=======
+>>>>>>> parent of 7339971 (hklkbm)
         
     }//GEN-LAST:event_btnLoggaInActionPerformed
 
