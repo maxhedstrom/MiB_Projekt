@@ -6,22 +6,31 @@ package MIBDB;
 
 import javax.swing.JOptionPane;
 import oru.inf.InfException;
-import oru.inf.InfDB;
+import oru.inf.infDB;
+import java.sql.PreparedStatement;
+
+
 /**
  *
  * @author maxhe
  */
 public class AdminWindow extends javax.swing.JFrame {
+ 
+    private static infDB idb;
+    
+    
 
-    private InfDB idb;
     /**
      * Creates new form AdminWindow
      */
+
     public AdminWindow() {
+        
         initComponents();
         txtEpost.selectAll();
         txtLösenord.selectAll();
-    }
+       
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -82,41 +91,46 @@ public class AdminWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoggaInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoggaInActionPerformed
-try {
-    if(Validering.textFaltHarVarde(txtEpost) && Validering.textFaltHarVarde(txtLösenord)) {
-        idb = new InfDB("mibdb","3306","mibdba","mibkey" );
-        String Användarnamn = txtEpost.getText();
-        String Lösenord = txtLösenord.getText();
-        String fraga = "Select Losenord from Agent where Epost= '"+ Användarnamn +"'";
-        String svar = idb.fetchSingle(fraga);
-        String resultat = svar;
+        // TODO add your handling code here:
         
-
-
-        if(Lösenord.contains(resultat)){
+    if(Validering.textFaltHarVarde(txtEpost) || Validering.textFaltHarVarde(txtLösenord)) 
+    
+        try 
+    { 
+       idb = new infDB("mibdb", "3306", "mibdba", "mibkey");
+       String Användarnamn = txtEpost.getText();
+       String Lösenord = txtLösenord.getText();
+       String fraga = "Select Losenord from Agent where Epost= '"+ Användarnamn +"'";
+       String svar = idb.fetchsingle("fraga");
+       String resultat = svar;
+       
+       if(Lösenord.contains(resultat)){
            System.out.println("inloggad");
-           new InloggadAdmin().setVisible(true);
-           
-           
-           
-
-
-        }
+          //new inloggadAdmin().setVisible();
+                   
+       }
+       else 
+       {
+           JOptionPane.showMessageDialog(null, "Inloggning misslyckades, kolla adminstatus eller inloggningsuppgifter");
+       }
+    
     }
+    
+   
+         
+         catch(InfException ettUndantag){
+         JOptionPane.showMessageDialog(null, "Något gick fel");
+          System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
+        
+       }        
 
 
-        else
-        {
-            JOptionPane.showMessageDialog(null, "Inloggning misslyckades, kolla adminstatus eller inloggningsuppgifter");
-        }
-
-        }
-     catch (Exception e) {
-              JOptionPane.showMessageDialog(null, "Något gick fel!");
-              System.out.println("Internt felmeddelande" + e.getMessage());
 
 
-     }        // TODO add your handling code here:
+        
+       
+    
+    
         
     }//GEN-LAST:event_btnLoggaInActionPerformed
 
@@ -167,4 +181,6 @@ try {
     private javax.swing.JTextField txtEpost;
     private javax.swing.JPasswordField txtLösenord;
     // End of variables declaration//GEN-END:variables
+
 }
+
