@@ -23,37 +23,79 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="91" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Component id="lblRubrik" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                  <Component id="btnTabortAlien" alignment="0" max="32767" attributes="0"/>
-                  <Component id="btnAndraAlien" alignment="0" max="32767" attributes="0"/>
-                  <Component id="btnRegAlien" alignment="0" max="32767" attributes="0"/>
-                  <Component id="btnTaBortUtrustning" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="lblRubrik1" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="btnTabortAlien" alignment="0" max="32767" attributes="0"/>
+                          <Component id="btnTaBortUtrustning" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
+                          <Component id="btnRegAlien1" alignment="0" max="32767" attributes="0"/>
+                          <Component id="btnAndraAlien2" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLayeredPane1" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="153" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="btnTabortAgent" alignment="1" max="32767" attributes="0"/>
+                      <Component id="btnSok" alignment="0" max="32767" attributes="0"/>
+                      <Component id="btnAndraAgent" max="32767" attributes="0"/>
+                      <Component id="btnRegAgent" alignment="1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="lblRubrik2" min="-2" pref="182" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="0" pref="35" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
               <Component id="lblRubrik" min="-2" pref="30" max="-2" attributes="0"/>
-              <EmptySpace pref="64" max="32767" attributes="0"/>
-              <Component id="btnRegAlien" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnAndraAlien" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnTaBortUtrustning" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnTabortAlien" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="lblRubrik1" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="btnRegAlien1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnAndraAlien2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnTaBortUtrustning" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnTabortAlien" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
+                              <Component id="jLayeredPane1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="lblRubrik2" min="-2" pref="30" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="btnRegAgent" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnAndraAgent" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="btnSok" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="btnTabortAgent" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace pref="41" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -61,18 +103,19 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="lblRubrik">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI Symbol" size="14" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="V&#xe4;lkommen tillbaka Admin, vad vill du g&#xf6;ra idag?"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnRegAlien">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Registrera ny alien"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnAndraAlien">
+    <Component class="javax.swing.JButton" name="btnAndraAgent">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#xc4;ndra information "/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAndraAgentActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnTabortAlien">
       <Properties>
@@ -86,6 +129,62 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Ta bort utrustning"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnRegAlien1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Registrera ny alien"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnSok">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xf6;k information"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSokActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnTabortAgent">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ta bort Agent"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTabortAgentActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnAndraAlien2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xc4;ndra information "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblRubrik1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="18" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Behandla alien..."/>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JLayeredPane" name="jLayeredPane1">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="false"/>
+      </Layout>
+    </Container>
+    <Component class="javax.swing.JLabel" name="lblRubrik2">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="18" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Behandla agent..."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnRegAgent">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Registrera ny agent"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegAgentActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

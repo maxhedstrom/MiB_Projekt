@@ -4,19 +4,28 @@
  */
 package MIBDB;
 
+import javax.swing.JOptionPane;
 import oru.inf.InfDB;
+import oru.inf.InfException;
 
 /**
  *
  * @author maxhe
  */
-public class inloggadAdmin extends javax.swing.JFrame {
+   
+
+public class InloggadAdmin extends javax.swing.JFrame {
+    
+    private static InfDB idb;    
 
     /**
      * Creates new form inloggadAdmin
      */
-    public inloggadAdmin() {
+    public InloggadAdmin() {
+     
         initComponents();
+        
+        
     }
 
     /**
@@ -29,18 +38,29 @@ public class inloggadAdmin extends javax.swing.JFrame {
     private void initComponents() {
 
         lblRubrik = new javax.swing.JLabel();
-        btnRegAlien = new javax.swing.JButton();
-        btnAndraAlien = new javax.swing.JButton();
+        btnAndraAgent = new javax.swing.JButton();
         btnTabortAlien = new javax.swing.JButton();
         btnTaBortUtrustning = new javax.swing.JButton();
+        btnRegAlien1 = new javax.swing.JButton();
+        btnSok = new javax.swing.JButton();
+        btnTabortAgent = new javax.swing.JButton();
+        btnAndraAlien2 = new javax.swing.JButton();
+        lblRubrik1 = new javax.swing.JLabel();
+        jLayeredPane1 = new javax.swing.JLayeredPane();
+        lblRubrik2 = new javax.swing.JLabel();
+        btnRegAgent = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        lblRubrik.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
         lblRubrik.setText("Välkommen tillbaka Admin, vad vill du göra idag?");
 
-        btnRegAlien.setText("Registrera ny alien");
-
-        btnAndraAlien.setText("Ändra information ");
+        btnAndraAgent.setText("Ändra information ");
+        btnAndraAgent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAndraAgentActionPerformed(evt);
+            }
+        });
 
         btnTabortAlien.setText("Ta bort Alien");
         btnTabortAlien.addActionListener(new java.awt.event.ActionListener() {
@@ -51,37 +71,102 @@ public class inloggadAdmin extends javax.swing.JFrame {
 
         btnTaBortUtrustning.setText("Ta bort utrustning");
 
+        btnRegAlien1.setText("Registrera ny alien");
+
+        btnSok.setText("Sök information");
+        btnSok.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSokActionPerformed(evt);
+            }
+        });
+
+        btnTabortAgent.setText("Ta bort Agent");
+        btnTabortAgent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTabortAgentActionPerformed(evt);
+            }
+        });
+
+        btnAndraAlien2.setText("Ändra information ");
+
+        lblRubrik1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblRubrik1.setText("Behandla alien...");
+
+        jLayeredPane1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblRubrik2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblRubrik2.setText("Behandla agent...");
+
+        btnRegAgent.setText("Registrera ny agent");
+        btnRegAgent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegAgentActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(91, Short.MAX_VALUE)
-                .addComponent(lblRubrik)
-                .addGap(46, 46, 46))
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(btnTabortAlien, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnAndraAlien, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnRegAlien, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnTaBortUtrustning, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
+                .addComponent(lblRubrik)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblRubrik1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(btnTabortAlien, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnTaBortUtrustning, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnRegAlien1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnAndraAlien2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(153, 153, 153)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(btnTabortAgent, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnSok, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnAndraAgent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnRegAgent, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(lblRubrik2, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 35, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(29, 29, 29)
                 .addComponent(lblRubrik, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
-                .addComponent(btnRegAlien)
-                .addGap(18, 18, 18)
-                .addComponent(btnAndraAlien)
-                .addGap(18, 18, 18)
-                .addComponent(btnTaBortUtrustning)
-                .addGap(18, 18, 18)
-                .addComponent(btnTabortAlien)
-                .addGap(54, 54, 54))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblRubrik1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(btnRegAlien1)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnAndraAlien2)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnTaBortUtrustning)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnTabortAlien))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(82, 82, 82)
+                                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblRubrik2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnRegAgent)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnAndraAgent)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnSok)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnTabortAgent)))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         pack();
@@ -90,6 +175,80 @@ public class inloggadAdmin extends javax.swing.JFrame {
     private void btnTabortAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTabortAlienActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnTabortAlienActionPerformed
+
+    private void btnTabortAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTabortAgentActionPerformed
+/**
+ * Öppnar ett nytt fönster för borttagning av agent.
+ */
+
+
+    }//GEN-LAST:event_btnTabortAgentActionPerformed
+
+    private void btnRegAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegAgentActionPerformed
+     /**
+      * Öppnar ett nytt fönster för registrering av ny agent.
+      */
+     InloggadAdmin_Reg_Agent inloggad = new InloggadAdmin_Reg_Agent();
+     inloggad.setVisible(true);
+    }//GEN-LAST:event_btnRegAgentActionPerformed
+
+    private void btnSokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSokActionPerformed
+         /**
+          * @param ID på agent.
+          * @Popup ruta öppnas med all information om efterfrågad agent.
+          */
+        try {
+            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
+            System.out.println("funka");
+            
+            String input = JOptionPane.showInputDialog(this,"Ange ID på agenten du vill få fram information om:");
+            String fraga = "SELECT * FROM Agent WHERE Agent_ID = '"+input+"'";
+            String svar = idb.fetchSingle(fraga);
+            //InloggadAdmin_SokInfoAgent sok = new InloggadAdmin_SokInfoAgent();
+            
+            String namn1 =  "SELECT Namn FROM Agent WHERE Agent_ID = '"+input+"'";
+            String telefon1 =  "SELECT Telefon FROM Agent WHERE Agent_ID = '"+input+"'";
+            String datum1 =  "SELECT Anstallningsdatum FROM Agent WHERE Agent_ID = '"+input+"'";
+            String admin1 =  "SELECT Administrator FROM Agent WHERE Agent_ID = '"+input+"'";
+            String epost1 =  "SELECT Epost FROM Agent WHERE Agent_ID = '"+input+"'";
+            String losen1 =  "SELECT Losenord FROM Agent WHERE Agent_ID = '"+input+"'";
+            String omrade1 =  "SELECT Omrade FROM Agent WHERE Agent_ID = '"+input+"'";
+            if (!(svar == null || svar.isEmpty())){
+                String namn = idb.fetchSingle(namn1);
+                String telefon = idb.fetchSingle(telefon1);
+                String datum = idb.fetchSingle(datum1);
+                String admin = idb.fetchSingle(admin1);
+                String epost = idb.fetchSingle(epost1);
+                String losen = idb.fetchSingle(losen1);
+                String omrade = idb.fetchSingle(omrade1);
+            
+            JOptionPane.showMessageDialog(rootPane,"ID: "+ input + "\nNamn: " + namn +
+              "\nTelefon: " + telefon + "\nAnställningsdatum: " + datum + "\nAdministrator: " + admin +
+                    "\nEpost: " + epost + "\nLösenord: " + losen + "\nOmråde: " + omrade);   
+            
+            }else {
+                JOptionPane.showMessageDialog(this, "Det angivna ID:t finns inte i databasen, vänligen försök igen!");
+            }
+                    
+                    
+        } catch (InfException ettUndantag) {
+            JOptionPane.showMessageDialog(null, "Något gick fel i databasen!");
+            System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(null, "Något gick fel!");
+            System.out.println("Internt felmeddelande" + e.getMessage());
+        }
+    }//GEN-LAST:event_btnSokActionPerformed
+
+    private void btnAndraAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAndraAgentActionPerformed
+         /**
+         * Öppnar ett nytt fönster för korrigering av agent.
+         */
+                InloggadAdmin_andraInfo andra = new InloggadAdmin_andraInfo();
+                andra.setVisible(true);
+          
+
+    }//GEN-LAST:event_btnAndraAgentActionPerformed
 
     /**
      * @param args the command line arguments
@@ -108,29 +267,37 @@ public class inloggadAdmin extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(inloggadAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InloggadAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(inloggadAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InloggadAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(inloggadAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InloggadAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(inloggadAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InloggadAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new inloggadAdmin().setVisible(true);
+                new InloggadAdmin().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAndraAlien;
-    private javax.swing.JButton btnRegAlien;
+    private javax.swing.JButton btnAndraAgent;
+    private javax.swing.JButton btnAndraAlien2;
+    private javax.swing.JButton btnRegAgent;
+    private javax.swing.JButton btnRegAlien1;
+    private javax.swing.JButton btnSok;
     private javax.swing.JButton btnTaBortUtrustning;
+    private javax.swing.JButton btnTabortAgent;
     private javax.swing.JButton btnTabortAlien;
+    private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JLabel lblRubrik;
+    private javax.swing.JLabel lblRubrik1;
+    private javax.swing.JLabel lblRubrik2;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,14 +4,16 @@
  */
 package MIBDB;
 
+import javax.swing.JOptionPane;
 import oru.inf.InfException;
-
+import oru.inf.InfDB;
 /**
  *
  * @author maxhe
  */
 public class AdminWindow extends javax.swing.JFrame {
 
+    private InfDB idb;
     /**
      * Creates new form AdminWindow
      */
@@ -80,7 +82,41 @@ public class AdminWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoggaInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoggaInActionPerformed
-        // TODO add your handling code here:
+try {
+    if(Validering.textFaltHarVarde(txtEpost) && Validering.textFaltHarVarde(txtLösenord)) {
+        idb = new InfDB("mibdb","3306","mibdba","mibkey" );
+        String Användarnamn = txtEpost.getText();
+        String Lösenord = txtLösenord.getText();
+        String fraga = "Select Losenord from Agent where Epost= '"+ Användarnamn +"'";
+        String svar = idb.fetchSingle(fraga);
+        String resultat = svar;
+        
+
+
+        if(Lösenord.contains(resultat)){
+           System.out.println("inloggad");
+           new InloggadAdmin().setVisible(true);
+           
+           
+           
+
+
+        }
+    }
+
+
+        else
+        {
+            JOptionPane.showMessageDialog(null, "Inloggning misslyckades, kolla adminstatus eller inloggningsuppgifter");
+        }
+
+        }
+     catch (Exception e) {
+              JOptionPane.showMessageDialog(null, "Något gick fel!");
+              System.out.println("Internt felmeddelande" + e.getMessage());
+
+
+     }        // TODO add your handling code here:
         
     }//GEN-LAST:event_btnLoggaInActionPerformed
 
