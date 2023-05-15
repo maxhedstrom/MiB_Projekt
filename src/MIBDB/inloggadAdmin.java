@@ -4,28 +4,19 @@
  */
 package MIBDB;
 
-import javax.swing.JOptionPane;
 import oru.inf.InfDB;
-import oru.inf.InfException;
 
 /**
  *
  * @author maxhe
  */
-   
-
-public class InloggadAdmin extends javax.swing.JFrame {
-    
-    private static InfDB idb;    
+public class inloggadAdmin extends javax.swing.JFrame {
 
     /**
      * Creates new form inloggadAdmin
      */
-    public InloggadAdmin() {
-     
+    public inloggadAdmin() {
         initComponents();
-        
-        
     }
 
     /**
@@ -51,17 +42,10 @@ public class InloggadAdmin extends javax.swing.JFrame {
         lblRubrik5 = new javax.swing.JLabel();
         btnRegAgent1 = new javax.swing.JButton();
         lblRubrik = new javax.swing.JLabel();
-        btnAndraAgent = new javax.swing.JButton();
+        btnRegAlien = new javax.swing.JButton();
+        btnAndraAlien = new javax.swing.JButton();
         btnTabortAlien = new javax.swing.JButton();
         btnTaBortUtrustning = new javax.swing.JButton();
-        btnRegAlien1 = new javax.swing.JButton();
-        btnSok = new javax.swing.JButton();
-        btnTabortAgent = new javax.swing.JButton();
-        btnAndraAlien2 = new javax.swing.JButton();
-        lblRubrik1 = new javax.swing.JLabel();
-        jLayeredPane1 = new javax.swing.JLayeredPane();
-        lblRubrik2 = new javax.swing.JLabel();
-        btnRegAgent = new javax.swing.JButton();
 
         jFrame1.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -184,15 +168,11 @@ public class InloggadAdmin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblRubrik.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
         lblRubrik.setText("Välkommen tillbaka Admin, vad vill du göra idag?");
 
-        btnAndraAgent.setText("Ändra information ");
-        btnAndraAgent.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAndraAgentActionPerformed(evt);
-            }
-        });
+        btnRegAlien.setText("Registrera ny alien");
+
+        btnAndraAlien.setText("Ändra information ");
 
         btnTabortAlien.setText("Ta bort Alien");
         btnTabortAlien.addActionListener(new java.awt.event.ActionListener() {
@@ -203,102 +183,37 @@ public class InloggadAdmin extends javax.swing.JFrame {
 
         btnTaBortUtrustning.setText("Ta bort utrustning");
 
-        btnRegAlien1.setText("Registrera ny alien");
-
-        btnSok.setText("Sök information");
-        btnSok.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSokActionPerformed(evt);
-            }
-        });
-
-        btnTabortAgent.setText("Ta bort Agent");
-        btnTabortAgent.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTabortAgentActionPerformed(evt);
-            }
-        });
-
-        btnAndraAlien2.setText("Ändra information ");
-
-        lblRubrik1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblRubrik1.setText("Behandla alien...");
-
-        jLayeredPane1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        lblRubrik2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblRubrik2.setText("Behandla agent...");
-
-        btnRegAgent.setText("Registrera ny agent");
-        btnRegAgent.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegAgentActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(91, Short.MAX_VALUE)
                 .addComponent(lblRubrik)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(46, 46, 46))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblRubrik1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(btnTabortAlien, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnTaBortUtrustning, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnRegAlien1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnAndraAlien2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(153, 153, 153)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(btnTabortAgent, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnSok, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAndraAgent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnRegAgent, javax.swing.GroupLayout.Alignment.TRAILING))
-                    .addComponent(lblRubrik2, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 35, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(btnTabortAlien, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnAndraAlien, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnRegAlien, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnTaBortUtrustning, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
+                .addContainerGap()
                 .addComponent(lblRubrik, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblRubrik1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(btnRegAlien1)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnAndraAlien2)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnTaBortUtrustning)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnTabortAlien))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(82, 82, 82)
-                                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblRubrik2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnRegAgent)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnAndraAgent)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnSok)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnTabortAgent)))
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                .addComponent(btnRegAlien)
+                .addGap(18, 18, 18)
+                .addComponent(btnAndraAlien)
+                .addGap(18, 18, 18)
+                .addComponent(btnTaBortUtrustning)
+                .addGap(18, 18, 18)
+                .addComponent(btnTabortAlien)
+                .addGap(54, 54, 54))
         );
 
         pack();
@@ -308,6 +223,7 @@ public class InloggadAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnTabortAlienActionPerformed
 
+<<<<<<< HEAD
     private void btnTabortAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTabortAgentActionPerformed
 /**
  * Öppnar ett nytt fönster för borttagning av agent.
@@ -402,6 +318,8 @@ public class InloggadAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRegAgent1ActionPerformed
 
+=======
+>>>>>>> parent of 7339971 (hklkbm)
     /**
      * @param args the command line arguments
      */
@@ -419,24 +337,31 @@ public class InloggadAdmin extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(InloggadAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(inloggadAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(InloggadAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(inloggadAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(InloggadAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(inloggadAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(InloggadAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(inloggadAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
+<<<<<<< HEAD
         java.awt.EventQueue.invokeLater(() -> {
             new InloggadAdmin().setVisible(true);
+=======
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new inloggadAdmin().setVisible(true);
+            }
+>>>>>>> parent of 7339971 (hklkbm)
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
     private javax.swing.JButton btnAndraAgent;
     private javax.swing.JButton btnAndraAgent1;
     private javax.swing.JButton btnAndraAlien2;
@@ -462,5 +387,12 @@ public class InloggadAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel lblRubrik3;
     private javax.swing.JLabel lblRubrik4;
     private javax.swing.JLabel lblRubrik5;
+=======
+    private javax.swing.JButton btnAndraAlien;
+    private javax.swing.JButton btnRegAlien;
+    private javax.swing.JButton btnTaBortUtrustning;
+    private javax.swing.JButton btnTabortAlien;
+    private javax.swing.JLabel lblRubrik;
+>>>>>>> parent of 7339971 (hklkbm)
     // End of variables declaration//GEN-END:variables
 }
