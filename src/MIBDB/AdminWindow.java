@@ -5,9 +5,9 @@
 package MIBDB;
 
 import javax.swing.JOptionPane;
-import oru.inf.InfException;
+
 import oru.inf.infDB;
-import java.sql.PreparedStatement;
+
 
 
 /**
@@ -101,12 +101,12 @@ public class AdminWindow extends javax.swing.JFrame {
        String Användarnamn = txtEpost.getText();
        String Lösenord = txtLösenord.getText();
        String fraga = "Select Losenord from Agent where Epost= '"+ Användarnamn +"'";
-       String svar = idb.fetchsingle("fraga");
+       String svar = idb.fetchsingle(fraga);
        String resultat = svar;
        
        if(Lösenord.contains(resultat)){
            System.out.println("inloggad");
-          //new inloggadAdmin().setVisible();
+          new InloggadAdmin().setVisible(true);
                    
        }
        else 
@@ -118,9 +118,9 @@ public class AdminWindow extends javax.swing.JFrame {
     
    
          
-         catch(InfException ettUndantag){
+         catch(Exception e){
          JOptionPane.showMessageDialog(null, "Något gick fel");
-          System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
+          System.out.println("Internt felmeddelande" + e.getMessage());
         
        }        
 
@@ -168,10 +168,8 @@ public class AdminWindow extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new AdminWindow().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new AdminWindow().setVisible(true);
         });
     }
       
